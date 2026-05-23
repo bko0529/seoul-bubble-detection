@@ -1,6 +1,6 @@
-# 서울 아파트 버블 조기경보 시스템
+# 수도권 아파트 버블 조기경보 시스템
 
-서울 아파트 가격 버블 조기경보 MLOps 파이프라인
+수도권(서울·경기·인천) 아파트 가격 버블 조기경보 MLOps 파이프라인
 
 ## 프로젝트 개요
 
@@ -29,12 +29,12 @@ main              ← 최종 완성본만
 ## 폴더 구조
 
 ```
-seoul-bubble-detection/
+sudogwon-bubble-detection/
 ├── data/
 │   ├── raw/          ← 각 폴더 README.md 참조해서 직접 다운로드
 │   └── processed/    ← 전처리 완료 데이터 (로컬에만)
-├── notebooks/        ← EDA ~ 앙상블 분석 노트북
-├── src/              ← 전처리 / Feature / 모델 코드
+├── notebooks/        ← EDA ~ 앙상블 분석 노트북 (7개)
+├── src/              ← 전처리 / Feature / 모델 / 시각화 코드
 ├── api/              ← FastAPI 서빙
 ├── n8n/workflows/    ← n8n 자동화 워크플로우
 └── presentation/     ← 발표 자료

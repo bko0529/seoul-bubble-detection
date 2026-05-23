@@ -2,19 +2,23 @@
 
 사이트: https://rt.molit.go.kr → 자료제공 → 아파트
 
-### 매매 (apt_trade_YYYY.csv)
+### 매매 (apt_trade_YYYY_[시도].csv)
 - 아파트 → 매매 탭 선택
 - 계약일자: YYYY-01-01 ~ YYYY-12-31
-- 지번주소 / 시도: 서울특별시 / 시군구: 전체
-- CSV 다운로드
-- 파일명: `apt_trade_2013.csv` ~ `apt_trade_2025.csv`
+- 지번주소 / 아래 시도별로 각각 다운로드
 
-### 전월세 (apt_jeonse_YYYY.csv)
+| 시도 | 파일명 예시 |
+|------|-----------|
+| 서울특별시 | `apt_trade_2025_seoul.csv` |
+| 경기도 | `apt_trade_2025_gyeonggi.csv` |
+| 인천광역시 | `apt_trade_2025_incheon.csv` |
+
+### 전월세 (apt_jeonse_YYYY_[시도].csv)
 - 아파트 → 전월세 탭 선택
-- 동일 조건으로 다운로드
-- 파일명: `apt_jeonse_2013.csv` ~ `apt_jeonse_2025.csv`
+- 동일 조건으로 시도별 다운로드
 
 ### 주의사항
 - `skiprows=15` 로 읽어야 실제 데이터 시작
 - 거래금액이 문자열+쉼표 형태 → 전처리 필요
 - 해제사유발생일 != '-' 인 행 = 계약취소 → 제거
+- 경기도 주소 형식: `"경기도 수원시 팔달구 인계동"` (서울보다 단계 하나 더 있음)
