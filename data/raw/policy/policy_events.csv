@@ -1,4 +1,4 @@
-deal_ym,event_name,event_type,direction,description
+연월,이벤트명,유형,방향,설명
 201304,4.1 부동산 대책,supply,1,양도세 한시 면제 + 생애최초 취득세 면제로 거래 활성화
 201309,8.28 전월세 대책,regulation,1,전세자금대출 한도 확대 + 월세 세액공제 도입
 201401,LTV·DTI 완화,finance,1,LTV 70%·DTI 60%로 전면 완화 (9.1 대책 일환)
