@@ -9,7 +9,12 @@ os.chdir("c:/Users/bko05/Desktop/seoul-bubble-detection")
 REGION_CONFIG = {
     "seoul":    {"sido": "서울", "gu_idx": 1, "dong_idx": 2},
     "incheon":  {"sido": "인천", "gu_idx": 1, "dong_idx": 2},
-    "gyeonggi": {"sido": "경기", "gu_idx": 2, "dong_idx": 3},
+    "gyeonggi": {"sido": "경기", "gu_idx": 1, "dong_idx": 2},  # 시 단위로 통일
+}
+
+# 행정구역 이름 표준화 (개칭 보정)
+GU_NORMALIZE = {
+    "남구": "미추홀구",   # 인천 남구 → 미추홀구 (2018년 7월 개칭)
 }
 
 KO_COLUMNS = {
@@ -69,6 +74,8 @@ def preprocess_jeonse(csv_path, region):
     df["gu"]    = split_addr.str.get(cfg["gu_idx"]).str.strip()
     df["dong"]  = split_addr.str.get(cfg["dong_idx"]).str.strip()
     df = df[df["gu"].notna()]
+    # 행정구역 이름 표준화 (인천 남구→미추홀구 등)
+    df["gu"] = df["gu"].replace(GU_NORMALIZE)
 
     # 단지명
     df["apt_name"] = df["단지명"].str.strip()
