@@ -13,7 +13,10 @@ data/raw/bok/*
 data/raw/kosis/*
 data/raw/bigkinds/*
 data/raw/naver/*
+data/raw/ecos/*
+data/raw/geo/*
 data/processed/*
+data/_archive/*
 !data/**/.gitkeep
 !data/**/README.md
 

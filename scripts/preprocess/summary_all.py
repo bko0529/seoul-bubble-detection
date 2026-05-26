@@ -2,7 +2,7 @@ import sys, os
 sys.stdout.reconfigure(encoding="utf-8")
 import pandas as pd
 
-os.chdir("c:/Users/bko05/Desktop/seoul-bubble-detection")
+os.chdir(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..")))
 
 summary_rows = []
 total_all = 0

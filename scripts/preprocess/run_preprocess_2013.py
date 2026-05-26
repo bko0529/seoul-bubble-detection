@@ -123,7 +123,7 @@ def preprocess(csv_path: str, region: str) -> pd.DataFrame:
 
 
 if __name__ == "__main__":
-    os.chdir("c:/Users/bko05/Desktop/seoul-bubble-detection")
+    os.chdir(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..")))
     os.makedirs("data/processed", exist_ok=True)
 
     REGIONS = ["seoul", "gyeonggi", "incheon"]

@@ -3,7 +3,7 @@ sys.stdout.reconfigure(encoding="utf-8")
 import pandas as pd
 import numpy as np
 
-os.chdir("c:/Users/bko05/Desktop/seoul-bubble-detection")
+os.chdir(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..")))
 
 # ── 설정 ──────────────────────────────────────────────
 REGION_CONFIG = {

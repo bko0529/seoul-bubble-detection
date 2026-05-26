@@ -54,7 +54,7 @@ def preprocess(csv_path, region):
     return result
 
 
-os.chdir("c:/Users/bko05/Desktop/seoul-bubble-detection")
+os.chdir(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..")))
 
 print("2013년 수도권 전처리 시작...")
 frames = []

@@ -2,7 +2,7 @@ import sys, os
 sys.stdout.reconfigure(encoding="utf-8")
 import pandas as pd
 
-os.chdir("c:/Users/bko05/Desktop/seoul-bubble-detection")
+os.chdir(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..")))
 
 path = "data/raw/molit/apt_jeonse_2025_seoul.csv"
 df = pd.read_csv(path, skiprows=15, encoding="cp949", dtype=str, nrows=5)

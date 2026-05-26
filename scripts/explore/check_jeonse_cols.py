@@ -2,7 +2,7 @@ import sys, os
 sys.stdout.reconfigure(encoding="utf-8")
 import pandas as pd
 
-os.chdir("c:/Users/bko05/Desktop/seoul-bubble-detection")
+os.chdir(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..")))
 
 # 서울 2013, 서울 2020, 경기 2013 세 파일 비교
 files = [
